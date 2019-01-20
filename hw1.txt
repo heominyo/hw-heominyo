@@ -1,2 +1,15 @@
 Homework 1:
+a) 
+  Acceptable:
+    1, 4, 5 (but be careful, take a break afterwards so it doesn't look the same)
+b)
+  Acceptable:
+    2, 3, 4, 5
+c)
+  1. False, it's 2 grace days allowed for each, 4 in total
+  2. False, it's 4 grace days, with 2 grace days each
+  3. False, it wil automatically be detected
+  4. True, it will automatically detect submissions
+d) 4
+
 
