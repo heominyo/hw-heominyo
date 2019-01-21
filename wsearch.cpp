@@ -31,7 +31,28 @@ struct Location
 bool readGrid(istream& instream, vector<vector<char> >& grid )
 {
   /** You complete **/
-
+	
+	//To cite sources, I just looked at references from cplusplus for vector like push_back and insert
+	//also looked get for istream
+	char c;
+	int size = 0;
+	int matchedSize = -1;
+	vector<char>* toAdd = new vector<char>;
+	while(instream.get(c)){
+		if(c == '\n'){
+			if(matchedSize==-1) matchedSize = size;
+			else if(size != matchedSize)return false;
+			size = 0;
+		  grid.push_back(*toAdd);
+			toAdd = new vector<char>;
+			continue;
+		}
+		if((c >= '0' && c <= '9') || (c >= 'a' && c <= 'z')){ // is alphanumeric
+			toAdd->push_back(c);
+			size++;
+		}
+	}
+	return (matchedSize == -1 && size != 0) || matchedSize != -1;
 }
 
 // prototype - will be implemented below
@@ -110,7 +131,14 @@ bool findWordHelper(const vector<vector<char> >& grid,
 		 unsigned int currWordIndex)
 {
   /*** You complete ***/
-
+	if(currLoc.row < 0 || (unsigned int)currLoc.row >= grid.size()) return false;
+	else if(currLoc.col < 0 || (unsigned int)currLoc.col >= grid[0].size()) return false;
+	bool matches = grid[currLoc.row][currLoc.col] == word[currWordIndex];
+	if(!matches) return false;
+	if(currWordIndex >= word.size()-1) return matches;
+	currLoc.row += delta.row;
+	currLoc.col += delta.col;
+	return matches && findWordHelper(grid, currLoc, delta, word, currWordIndex);
 }
 
 int main(int argc, char* argv[])
