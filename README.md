@@ -2,9 +2,13 @@
 This is the repository is for homework 1
 
 Solution from problem 1 to problem 2 is in hw1.txt
+
 Solution for problem is not listed
+
 Solution for problem 4 is in hw1p4.pdf
+
 Solution for problem 5 is in wsearch.cpp
+
 Solution for problem 6 is in teams.cpp
 
 Sources: Only cplusplus.com sites were used for reference. Looked up ifstream, vector, istream references.
