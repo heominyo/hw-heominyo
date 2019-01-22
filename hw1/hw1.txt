@@ -25,4 +25,16 @@ Homework 1:
 	Problem 3:
 	Problem 4:
 		on hw1p4.pdf
+		Each page is the after a function pops off a stack. For example, the func1 stack data when n == 0 is popped off and func2 is then called from the func1 stack when n == 1.
+		Reds are updates and changes from the very first page.
+		Therefore, mat will be 
+		{r1, r2, r3}
+		and r1 = [ 1, 2, 3, 4]
+		and r2 = [10, 6, 7, 8]
+		and r3 = [31,10,11,12]
+		Therefore, the deeper view of the 2d array mat is:
+		[[ 1, 2, 3, 4],
+		 [10, 6, 7, 8],
+		 [31,10,11,12]]
+
 	Problem 5:
